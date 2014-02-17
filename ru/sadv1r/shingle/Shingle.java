@@ -33,7 +33,6 @@ public class Shingle {
         String shingles = "";
 
         //Create all shingles
-
         for (int i = 0; i <= shinglesNumber; i++) {
             String shingle = "";
 
@@ -51,8 +50,8 @@ public class Shingle {
     public int compare(String textShingles1New, String textShingles2New) {
         //textShingles1New and textShingles2New equals "" or null bug fix
         if (textShingles1New.equals("")  || textShingles2New.equals("")  ||
-                textShingles1New.equals(" ") || textShingles2New.equals(" ") ||
-                textShingles1New == null     || textShingles2New == null)       return 0;
+            textShingles1New.equals(" ") || textShingles2New.equals(" ") ||
+            textShingles1New == null     || textShingles2New == null)       return 0;
 
         String textShingles1[] = textShingles1New.split(";");
         String textShingles2[] = textShingles2New.split(";");
@@ -79,10 +78,6 @@ public class Shingle {
         }
 
         return (int) ((similarShinglesNumber / ((textShingles1Number + textShingles2Number) / 2.0)) * 100);
-
-
-
     }
-
 
 }
