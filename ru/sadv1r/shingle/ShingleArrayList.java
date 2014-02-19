@@ -4,13 +4,16 @@ import java.util.ArrayList;
 
 /**
  * @author sadv1r
- * @version 0.1
+ * @version 0.6
  *
  * Created 2/11/14, 3:29 AM
  */
 public class ShingleArrayList {
-    private static final String STOP_SYMBOLS[] = {".",",","!","?",":",";","-","\\","/","*","(",")"};
-    private static final String STOP_WORDS[] = {"это", "как", "так", "и", "в", "над", "к", "до", "не", "на", "но", "за", "то", "с", "ли", "а", "во", "от", "со", "для", "о", "же", "ну", "вы", "бы", "что", "кто", "он", "она"};
+    private static final String STOP_SYMBOLS[] = {".", ",", "!", "?", ":", ";", "-", "\\", "/", "*", "(", ")", "+", "@",
+                                                  "#", "$", "%", "^", "&", "=", "'", "\"", "[", "]", "{", "}", "|"};
+    private static final String STOP_WORDS[] = {"это", "как", "так", "и", "в", "над", "к", "до", "не", "на", "но", "за",
+                                                "то", "с", "ли", "а", "во", "от", "со", "для", "о", "же", "ну", "вы",
+                                                "бы", "что", "кто", "он", "она"};
     private static final int SHINGLE_LEN = 2;
 
     private String canonize(String str) {
